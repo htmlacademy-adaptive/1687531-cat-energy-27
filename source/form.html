@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
-
 <body class="page__body">
   <header class="form-header">
     <a class="form-header__logo ">
@@ -40,63 +39,54 @@
         </ul>
       </div>
     </nav>
-  </header>
-  <main class="form-main">
-    <h1 class="vissualy-hidden">Анкета для подбора программы.</h1>
-    <section class="form">
-      <div class="form__wrapper">
-        <h2 class="form__title">Подбор программы</h2>
-        <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <form action="index.html" method="post">
-          <label for="name">ИМЯ:*</label>
-          <input type="text" id="name" name="cat_name" placeholder="Барсик">
-
-          <label for="weight">Вес (кг):*</label>
-          <input type="text" id="weight" name="cat_weight" placeholder="7">
-
-          <label for="age">Возраст (лет):</label>
-          <input type="text" id="age" name="cat_age" placeholder="7">
-
-          <input type="radio" id="weight_loss" value="weight_loss" name="weight_loss">
-          <label for="weight_loss" class="light">похудение</label>
-          <input type="radio" id="weight_gain" value="weight_gain" name="weight_gain">
-          <label for="weight_gain" class="light">Набор массы</label>
-          <input type="radio" id="advice" value="advice" name="advice">
-          <label for="advice" class="light">Не знаю (Нужен ваш совет)</label>
-      </div>
-    </section>
-    <section class="data">
-      <div class="data__wrapper">
-        <h2 class="data__title">Контактные данные (владельца кота)</h2>
-
-        <label for="mail">E-mail:*</label>
-        <input type="email" id="mail" name="mail_user" placeholder="kuklachev@gmail.com">
-
-        <label for="number">Телефон:*</label>
-        <input type="number" id="number" name="number_user" placeholder="8 (960) 900-60-90">
-      </div>
-    </section>
-    <section class="communication">
-      <div class="communication__wrapper">
-        <h2 class="communication__title">Комментарий</h2>
-        <textarea id="comment" name="comment-cat" placeholder="Расскажите обо всех повадках кота"></textarea>
-      </div>
-    </section>
-    <section class="additional">
-      <div class="additional__wrapper">
-        <h2 class="additional__title">Дополнительно</h2>
-        <input type="checkbox" id="sweetener" value="user_sweetener" name="user_sweetener"><label class="light"
-          for="sweetener">сахарозаменитель</label>
-        <input type="checkbox" id="water" value="user_water" name="user_water"><label class="light" for="water">питьевая
-          вода</label>
-        <input type="checkbox" id="milk" value="user_milk" name="user_milk"><label class="light"
-          for="milk">молоко</label>
-        <input type="checkbox" id="vitamins" value="user_vitamins" name="user_vitamins"><label class="light"
-          for="milk">витамины</label>
-        <a class="additional__button button" href="#">отправить заявку</a>
-        <span class="additional__description">* — Обязательные поля</span>
-      </div>
-      </form>
+    </header>
+    <main class="form-main">
+      <h1 class="vissualy-hidden">Анкета для подбора программы.</h1>
+      <section class="form">
+        <div class="form__wrapper">
+          <h2 class="form__title">Подбор программы</h2>
+          <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <form action="index.html" method="post">
+          <fieldset class="form__item">
+            <label for="name">ИМЯ:*</label>
+            <input type="text" id="name" name="cat_name" placeholder="Барсик">
+            <label for="weight">Вес (кг):*</label>
+            <input type="text" id="weight" name="cat_weight" placeholder="7">
+            <label for="age">Возраст (лет):</label>
+            <input type="text" id="age" name="cat_age" placeholder="7">
+            <input type="radio" id="weight_loss" value="weight_loss" name="weight_loss">
+            <label for="weight_loss" class="light">похудение</label>
+            <input type="radio" id="weight_gain" value="weight_gain" name="weight_gain">
+            <label for="weight_gain" class="light">Набор массы</label>
+            <input type="radio" id="advice" value="advice" name="advice">
+            <label for="advice" class="light">Не знаю (Нужен ваш совет)</label>
+          </fieldset>
+          <fieldset class="form__section">
+            <h2 class="form__section__title">Контактные данные (владельца кота)</h2>
+            <label for="mail">E-mail:*</label>
+            <input type="email" id="mail" name="mail_user" placeholder="kuklachev@gmail.com">
+            <label for="number">Телефон:*</label>
+            <input type="number" id="number" name="number_user" placeholder="8 (960) 900-60-90">
+          </fieldset>
+           <fieldset class="form__section-communication">
+            <h2 class="form__section-communication__title">Комментарий</h2>
+            <textarea id="comment" name="comment-cat" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+           <fieldset class="form__pushbutton">
+            <h2 class="form__pushbutton__title">Дополнительно</h2>
+            <input type="checkbox" id="sweetener" value="user_sweetener" name="user_sweetener"><label class="light"
+              for="sweetener">сахарозаменитель</label>
+            <input type="checkbox" id="water" value="user_water" name="user_water"><label class="light" for="water">питьевая
+              вода</label>
+            <input type="checkbox" id="milk" value="user_milk" name="user_milk"><label class="light"
+              for="milk">молоко</label>
+            <input type="checkbox" id="vitamins" value="user_vitamins" name="user_vitamins"><label class="light"
+              for="milk">витамины</label>
+            <button class="form__pushbutton__button button" type="submit">отправить заявку</button>
+            <span class="form__pushbutton__description">* — Обязательные поля</span>
+          </fieldset>
+          </form>
+        </div>
     </section>
   </main>
   <footer class="main-footer">
@@ -114,7 +104,7 @@
     </section>
     <div class="main-footer__wrapper">
       <div class="main-footer__image image">
-        <img class="main-header__logo-image" src="../source/img/header-phone/title-cat-energy.svg" width="101"
+        <img class="main-footer__logo-image" src="../source/img/header-phone/title-cat-energy.svg" width="101"
           height="18" alt="Онлайн магазин «Cat-Energy»">
       </div>
       <div class="main-footer__social social">
