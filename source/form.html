@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="../source/css/style.css">
 </head>
+
 <body class="page__body">
   <header class="form-header">
     <a class="form-header__logo ">
@@ -39,14 +41,14 @@
         </ul>
       </div>
     </nav>
-    </header>
-    <main class="form-main">
-      <h1 class="vissualy-hidden">Анкета для подбора программы.</h1>
-      <section class="form">
-        <div class="form__wrapper">
-          <h2 class="form__title">Подбор программы</h2>
-          <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-          <form action="index.html" method="post">
+  </header>
+  <main class="form-main">
+    <h1 class="vissualy-hidden">Анкета для подбора программы.</h1>
+    <section class="form">
+      <div class="form__wrapper">
+        <h2 class="form__title">Подбор программы</h2>
+        <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form action="index.html" method="post">
           <fieldset class="form__item">
             <label for="name">ИМЯ:*</label>
             <input type="text" id="name" name="cat_name" placeholder="Барсик">
@@ -68,15 +70,16 @@
             <label for="number">Телефон:*</label>
             <input type="number" id="number" name="number_user" placeholder="8 (960) 900-60-90">
           </fieldset>
-           <fieldset class="form__section-communication">
+          <fieldset class="form__section-communication">
             <h2 class="form__section-communication__title">Комментарий</h2>
             <textarea id="comment" name="comment-cat" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
-           <fieldset class="form__pushbutton">
+          <fieldset class="form__pushbutton">
             <h2 class="form__pushbutton__title">Дополнительно</h2>
             <input type="checkbox" id="sweetener" value="user_sweetener" name="user_sweetener"><label class="light"
               for="sweetener">сахарозаменитель</label>
-            <input type="checkbox" id="water" value="user_water" name="user_water"><label class="light" for="water">питьевая
+            <input type="checkbox" id="water" value="user_water" name="user_water"><label class="light"
+              for="water">питьевая
               вода</label>
             <input type="checkbox" id="milk" value="user_milk" name="user_milk"><label class="light"
               for="milk">молоко</label>
@@ -85,8 +88,8 @@
             <button class="form__pushbutton__button button" type="submit">отправить заявку</button>
             <span class="form__pushbutton__description">* — Обязательные поля</span>
           </fieldset>
-          </form>
-        </div>
+        </form>
+      </div>
     </section>
   </main>
   <footer class="main-footer">
