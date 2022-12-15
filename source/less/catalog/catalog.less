@@ -1,7 +1,18 @@
 .catalog {
-    width: 320px;
+  background-color: #fff;
 }
 
+.catalog__product-card{
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2,324px);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4,245px);
+  }
+}
 
 .catalog__title {
     font-family: 'Oswald', sans-serif;
@@ -9,6 +20,7 @@
     font-size: 36px;
     line-height: 36px;
     color: @basic-color;
+    text-align: center;
 }
 
 .catalog__product-card {

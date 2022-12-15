@@ -1,8 +1,20 @@
-.inner-main{
+.inner-main {
   background-color: #fff;
 }
 
-.inner-main__wrapper{
-    width: 320px;
-    margin:0 auto;
+
+.inner-main__wrapper {
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+
+    .stripe {
+      border: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
