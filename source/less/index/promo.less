@@ -1,11 +1,24 @@
 .promo {
-    width: 320px;
-    margin: 0 auto;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),url(../img/promo/gray-cat.jpg) ;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/promo/gray-cat.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
+
+.promo__wrapper {
+    width: 320px;
+    margin: 0 auto;
+    @media (min-width: @tablet-width) {
+        width: 709px;
+    }
+
+    @media (min-width: @desktop-width){
+        width: 1220px;
+    }
+}
+
+
+
 
 .promo__product-image{
     display: block;
@@ -32,6 +45,13 @@
 }
 
 .promo__button{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
     background-color: #68B738;
     padding: 7px 44px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 18px;
 }

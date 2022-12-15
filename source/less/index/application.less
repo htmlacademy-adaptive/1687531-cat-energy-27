@@ -1,7 +1,18 @@
 .application {
+  margin-bottom: 49px;
+}
+
+.application__wrapper {
   width: 320px;
   margin: 0 auto;
-  margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
 
 .application__title {
@@ -10,7 +21,54 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  color: #000000;
+  color: @basic-color;
+}
+
+.application__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 230px 246px 247px 249px;
+
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+
+}
+
+.application__item {
+  width: 280px;
+
+  &--helpful {
+    background: #68B738;
+    background-image: url(../img/application/helpful.svg);
+    background-repeat: no-repeat;
+  }
+
+  &--powder {
+    background: #68B738;
+    background-image: url(../img/application/powder.svg);
+    background-repeat: no-repeat;
+  }
+
+  &--nutrition {
+    background: #68B738;
+    background-image: url(../img/application/eat.svg);
+    background-repeat: no-repeat;
+  }
+
+  &--time {
+    background: #68B738;
+    background-image: url(../img/application/time.svg);
+    background-repeat: no-repeat;
+  }
+
+
 }
 
 .application__description {
@@ -21,5 +79,3 @@
   color: #444444;
   text-align: left;
 }
-
-

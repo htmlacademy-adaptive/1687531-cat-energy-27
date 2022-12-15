@@ -1,13 +1,15 @@
 .form {
-    width: 320px;
+    background-color: #FFFFFF;
 }
+
+
 
 .form__title {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     font-size: 36px;
     line-height: 36px;
-    color: #000000;
+    color: @basic-color;
 }
 
 .form__description {
@@ -15,7 +17,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    color: #000000;
+    color: @basic-color;
 }
 
 .form__characteristic {
@@ -30,7 +32,7 @@
     }
 
     &--change {
-        color: #000000;
+        color: @basic-color;
     }
 }
 
@@ -39,20 +41,22 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 26px;
-    color: #000000;
+    color: @basic-color;
 }
 
-.form__pushbutton__button {
+.form__pushbutton-button {
+    font-family: 'Oswald', sans-serif;
     background-color: #68B738;
     padding: 7px 44px;
     text-transform: uppercase;
     color: #FFFFFF;
+    border: none;
 }
 
-.form__pushbutton__description {
+.form__pushbutton-description {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    color: #000000;
+    color: @basic-color;
 }
