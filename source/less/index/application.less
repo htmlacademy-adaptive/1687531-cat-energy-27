@@ -3,7 +3,7 @@
 }
 
 .application__wrapper {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -22,6 +22,7 @@
   font-size: 36px;
   line-height: 40px;
   color: @basic-color;
+  margin: 0;
 }
 
 .application__list {
@@ -31,18 +32,20 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2,230px);
+    grid-template-columns: repeat(2,246px);
+    gap: 153px;
 
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
+    grid-template-columns: repeat(4,230px);
+    gap: 94px;
   }
 
 }
 
 .application__item {
-  width: 280px;
+  background-color: #ffff;
 }
 
 
@@ -82,4 +85,5 @@
   line-height: 18px;
   color: #444444;
   text-align: left;
+  margin: 0;
 }
