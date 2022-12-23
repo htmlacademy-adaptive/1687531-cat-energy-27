@@ -42,14 +42,75 @@
   background-color: #F2F2F2;
   margin-bottom: 20px;
   padding: 24px 33px 18px 22px;
+  position: relative;
 
   &--position {
     margin-bottom: 20px;
   }
 
+  &--cat::before {
+    @media (max-width: @mobile-width-only) {
+      content: "";
+      background-color: #68B738;
+      display: inline-block;
+      position: relative;
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 50px;
+      border-radius: 35px;
+      top: 48px;
+    }
+  }
+
+  &--cat::after {
+    @media (max-width: @mobile-width-only) {
+      position: relative;
+      display: inline-block;
+      content: "";
+      background-image: url(../img/programs/cat.svg);
+      background-repeat: no-repeat;
+      width: 36px;
+      height: 50px;
+      top: -219px;
+      left: 5px;
+    }
+  }
+
+
+  &--panters::before {
+    @media (max-width: @mobile-width-only){
+    content: "";
+    display: inline-block;
+    position: relative;
+    background-color: #68B738;
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    border-radius: 35px;
+    left: 1px;
+    top: 49px;
+    }
+  }
+
+  &--panters::after{
+    @media (max-width: @mobile-width-only) {
+      position: relative;
+      display: inline-block;
+      content: "";
+      background-image: url(../img/programs/panters.svg);
+      background-repeat: no-repeat;
+      width: 67px;
+      height: 50px;
+      left: -8px;
+      bottom: 206px;
+    }
+  }
+
+
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-rows: 40px 100px 40px;
+    grid-template-rows: 60px 24px min-content 52px min-content;
     padding: 77px 62px 53px 52px;
 
     &--cat::before {
@@ -63,7 +124,7 @@
       height: 200px;
       border-radius: 100px;
       left: 70px;
-      top: -10px;
+      top: 20px;
     }
 
     &--cat::after {
@@ -73,10 +134,9 @@
       background-repeat: no-repeat;
       width: 140px;
       height: 194px;
-      right: -100px;
-      top: -170px;
+      right: -411px;
+      top: -51px;
     }
-
 
     &--panters::before {
       content: "";
@@ -88,8 +148,8 @@
       width: 200px;
       height: 200px;
       border-radius: 100px;
-      left: 110px;
-      top: -10px;
+      left: 62px;
+      top: 37px;
     }
 
     &--panters::after {
@@ -99,9 +159,11 @@
       background-repeat: no-repeat;
       width: 269px;
       height: 113px;
-      right: -74px;
-      top: -110px;
+      right: -361px;
+      top: 22px;
     }
+
+
 
 
     @media (min-width: @desktop-width) {
@@ -109,6 +171,7 @@
       flex-direction: column;
       padding: 47px 67px 55px 33px;
       margin: 0;
+
 
       &--panters::after,
       &--panters::before {
@@ -120,7 +183,6 @@
         display: none;
       }
     }
-
   }
 
 }
@@ -136,34 +198,9 @@
   line-height: 37px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 29px;
   position: relative;
-
-  &--pic::after {
-    @media (max-width: @mobile-width-only) {
-      position: absolute;
-      content: "";
-      background-image: url(../img/programs/cat.svg);
-      background-repeat: no-repeat;
-      width: 36px;
-      height: 50px;
-      left: 7px;
-      top: -3px;
-    }
-  }
-
-  &--img::after {
-    @media (max-width: @mobile-width-only) {
-      position: absolute;
-      content: "";
-      background-image: url(../img/programs/panters.svg);
-      background-repeat: no-repeat;
-      width: 67px;
-      height: 50px;
-      left: -9px;
-      top: 13px;
-    }
-  }
+  margin-left: 69px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -171,7 +208,6 @@
     margin: 0;
     grid-column: 1/2;
     grid-row: 1/2;
-    margin-bottom: 24px;
   }
 
   @media (min-width: @desktop-width) {
@@ -227,23 +263,6 @@
   }
 }
 
-
-.programs__title::before {
-  @media (max-width: @mobile-width-only) {
-    content: "";
-    background-color: #68B738;
-    display: inline-block;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-    border-radius: 35px;
-    margin-right: 19px;
-  }
-}
-
-
-
-
 .programs__description {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -279,10 +298,9 @@
     font-size: 16px;
     line-height: 24px;
     grid-column: 1/3;
-    grid-row: 2/-2;
+    grid-row: 3/4;
     width: 340px;
     margin: 0;
-    margin-bottom: 48px;
   }
 
   @media (min-width: @desktop-width) {
@@ -294,13 +312,12 @@
 }
 
 .programs__link-place {
-  width: 170px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     grid-column: 1/2;
-    grid-row: 3/4;
+    grid-row: 6/7;
     width: 165px;
     display: flex;
     align-items: center;

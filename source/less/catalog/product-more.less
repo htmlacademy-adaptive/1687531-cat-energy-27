@@ -4,12 +4,48 @@
   display: grid;
   justify-items: center;
   grid-template-columns: 280px;
-  grid-template-rows: repeat(4,40px);
+  grid-template-rows: repeat(4, 40px);
+  padding-top: 33px;
+  position: relative;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    margin: 0;
+    padding: 0;
+    border: 2px solid #F2F2F2;
+
+    @media (min-width: @desktop-width) {
+      width: 241px;
+    }
+  }
 }
 
-.product-more__image {
-  padding: 25px 145px;
-  margin-bottom: 23px;
+.product-more::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  background-image: url(../img/phone/plus.png);
+  width: 30px;
+  height: 30px;
+  top: -10px;
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    display: inline-block;
+    position: relative;
+    background-image: url(../img/product/plus-2.png);
+    width: 60px;
+    height: 60px;
+    top: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 47px;
+  }
+
 }
 
 .product-more__heading {
@@ -20,18 +56,54 @@
   color: #111111;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 8px;
+  grid-row: 2/3;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    padding: 100px 94px 0 96px;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 115px 51px 0 56px;
+  }
 }
 
 .product-more__descriptions {
-  font-family: 'Lato',sans-serif;
+  font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: #444444;
   margin: 0;
-  margin-bottom: 21px;
+  grid-row: 3/4;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 0 79px 78px 80px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 35px 88px 40px;
+  }
+}
+
+.product-more__wrapper-button {
+
+  @media (min-width: @tablet-width) {
+    grid-row: 4/5;
+    padding: 0 37px 65px 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 38px 41px 38px;
+  }
+
 }
 
 .product-more__button {
@@ -43,4 +115,15 @@
   text-transform: uppercase;
   text-decoration: none;
   padding: 10px 94px;
+  grid-row: 4/5;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 37px;
+  }
+
+
 }
