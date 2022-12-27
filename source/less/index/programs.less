@@ -53,26 +53,26 @@
       content: "";
       background-color: #68B738;
       display: inline-block;
-      position: relative;
+      position: absolute;
       background-repeat: no-repeat;
       width: 50px;
       height: 50px;
       border-radius: 35px;
-      top: 48px;
+      top: 19px;
     }
   }
 
   &--cat::after {
     @media (max-width: @mobile-width-only) {
-      position: relative;
+      position: absolute;
       display: inline-block;
       content: "";
       background-image: url(../img/programs/cat.svg);
       background-repeat: no-repeat;
       width: 36px;
       height: 50px;
-      top: -219px;
-      left: 5px;
+      top: 16px;
+      left: 29px;
     }
   }
 
@@ -81,29 +81,28 @@
     @media (max-width: @mobile-width-only){
     content: "";
     display: inline-block;
-    position: relative;
+    position: absolute;
     background-color: #68B738;
     display: inline-block;
     background-repeat: no-repeat;
     width: 50px;
     height: 50px;
     border-radius: 35px;
-    left: 1px;
-    top: 49px;
+    top: 19px;
     }
   }
 
   &--panters::after{
     @media (max-width: @mobile-width-only) {
-      position: relative;
+      position: absolute;
       display: inline-block;
       content: "";
       background-image: url(../img/programs/panters.svg);
       background-repeat: no-repeat;
       width: 67px;
       height: 50px;
-      left: -8px;
-      bottom: 206px;
+      left: 13px;
+      top: 29px;
     }
   }
 
@@ -191,7 +190,6 @@
 .programs__title {
   display: flex;
   align-items: center;
-  width: 225px;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -200,7 +198,7 @@
   margin: 0;
   margin-bottom: 29px;
   position: relative;
-  margin-left: 69px;
+  margin-left: 71px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
