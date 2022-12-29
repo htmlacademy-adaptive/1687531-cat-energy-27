@@ -8,6 +8,10 @@
 
   @media (min-width: @tablet-width) {
     width: 709px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 30px;
 
     .main-footer__image--stripe {
       border-bottom: none;
@@ -21,12 +25,23 @@
 
   @media (min-width: @desktop-width) {
     width: 1220px;
+    padding: 66px 110px;
   }
 
 }
 
 .main-footer__image{
   text-align: center;
+}
+
+.main-footer__logo-image{
+  padding-top: 40px;
+  padding-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    width: 143px;
+    height: 26px;
+  }
 }
 
 .main-footer__social{
