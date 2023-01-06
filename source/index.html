@@ -6,14 +6,22 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/152.svg"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-basic-image" src="img/header-phone/logo-cat-phone.svg" width="34" height="38"
-          alt="Логотип «Cat-Energy»">
+        <picture>
+          <source media="(min-width: 1220px)" width="70" height="59" srcset="img/header-phone/header-logo-desktop.svg">
+          <source media="(min-width: 768px)" width="60" height="50" srcset="img/header-phone/header-logo-tablet.svg">
+          <img class="main-header__logo-basic-image" src="img/header-phone/logo-cat-phone.svg" width="34" height="38"
+            alt="Логотип «Cat-Energy»">
+        </picture>
       </a>
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="img/header-phone/title-cat-energy.svg" width="101" height="18"
@@ -53,8 +61,11 @@
           <h2 class="promo__title">Функциональное<br> питание для котов</h2>
           <p class="promo__description">Занялся собой? Займись котом!</p>
         </header>
-        <img class="promo__product-image" src="img/promo/orange-product-index.png" width="280" height="270"
-          alt="Продукт компании Cat energy.">
+        <picture>
+          <source media="(min-width: 1220px)" width="552" height="499" srcset="img/promo/index-cat-desktop.png 1x, img/promo/index-cat-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="709" height="609" srcset="img/promo/orange-product-index@1.png 1x, img/promo/orange-product-index@2x.png 2x">
+          <img class="promo__product-image" src="img/promo/orange-product-index.png" width="280" height="270" alt="Продукт компании Cat energy.">
+        </picture>
         <a class="promo__button button promo__button--acent" type="button" href="form.html">Подобрать программу</a>
       </div>
     </section>
@@ -165,8 +176,8 @@
         <div class="contacts__scheme">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.618941817891!2d30.3225318412148!3d59.93846503200518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1672166960524!5m2!1sru!2sru"
-            width="600" height="450"  allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" width="320" height="362" allowfullscreen
+            width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            width="320" height="362" allowfullscreen
             title="Офис компании по адресу , ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
           </iframe>
         </div>
@@ -213,7 +224,8 @@
       </section>
       <section class="main-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <img class="copyright__image" src="img/social/html-academy.png" width="27" height="34" alt="Логотип HTML Academy.">
+        <img class="copyright__image" src="img/social/html-academy.png" width="27" height="34"
+          alt="Логотип HTML Academy.">
       </section>
     </div>
   </footer>

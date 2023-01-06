@@ -1,5 +1,9 @@
-.promo{
+.promo {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .promo::before {
@@ -13,6 +17,14 @@
   background-repeat: no-repeat;
   margin-bottom: 20px;
   z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
 }
 
 .promo__wrapper {
@@ -37,6 +49,10 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .promo__title {
@@ -49,6 +65,19 @@
   margin: 0;
   margin-bottom: 25px;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @basic-color;
+    margin-bottom: 41px;
+    padding-left: 91px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
 
 .promo__description {
@@ -62,6 +91,19 @@
   margin: 0;
   z-index: 1;
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-color;
+    margin-bottom: 20px;
+    padding-left: 93px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
 
 .promo__button {
@@ -74,6 +116,16 @@
   text-decoration: none;
   font-size: 14px;
   line-height: 18px;
-  display:block;
+  display: block;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: inline-block;
+    top: -577px;
+    left: 95px;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
