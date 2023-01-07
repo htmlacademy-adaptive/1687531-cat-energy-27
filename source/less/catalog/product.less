@@ -100,17 +100,20 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    padding: 0 82px 38px;
+    padding: 0 82px 390px;
 
-    &--big-pic{
-      padding: 0 78px 60px;
-    }
   }
 
   @media (min-width: @desktop-width) {
     display: block;
-    padding: 0px 42px 38px;
+    padding: 0px 42px 390px;
   }
+}
+
+.product__wrapper-img{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  text-align: center;
 }
 
 .product__wrapper-button {
