@@ -3,11 +3,11 @@
 }
 
 .application__wrapper {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 709px;
+    width: 708px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,6 +22,14 @@
   font-size: 36px;
   line-height: 40px;
   color: @basic-color;
+  margin: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 72px;
+  }
 }
 
 .application__list {
@@ -30,45 +38,97 @@
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2,230px);
+    display: flex;
+    row-gap: 77px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
+    flex-wrap: nowrap;
   }
 
 }
 
 .application__item {
-  width: 280px;
+  display: flex;
+  background-color: #ffff;
+
+  @media (min-width: @tablet-width) {
+    width: 246px;
+    flex-direction: column;
+    position: relative;
+    padding-top:40px;
+    padding-bottom: 57px;
+    &--one{
+    background-image: url(../img/application/1.svg);
+    background-repeat: no-repeat;
+    background-position:  bottom 14px right 50px;
+    }
+
+    &--two{
+      background-image: url(../img/application/2.svg);
+      background-repeat: no-repeat;
+      background-position:  bottom 12px right 11px;
+      }
+
+      &--three{
+        background-image: url(../img/application/3.svg);
+        background-repeat: no-repeat;
+        background-position:  bottom 11px right 11px;;
+        }
+
+        &--four{
+          background-image: url(../img/application/4.svg);
+          background-repeat: no-repeat;
+          background-position:  bottom 14px  right 2px;
+          }
+
+
+}
+}
+
+.application__item:not(:last-child) {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 20px;
+  }
 }
 
 
-.application__item::before{
+.application__item::before {
   content: "";
   width: 60px;
   height: 60px;
   background-color: #68B738;
   display: inline-block;
   background-repeat: no-repeat;
-  background-position: center center;
-}
+  background-position: center;
+  margin-right: 20px;
 
-.application__item--helpful::before{
+
+    @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 31px;
+    width: 80px;
+    height: 80px;
+    }
+
+  }
+
+.application__item--helpful::before {
   background-image: url(../img/application/helpful.svg);
 }
 
-.application__item--powder::before{
+.application__item--powder::before {
   background-image: url(../img/application/powder.svg);
 }
 
-.application__item--nutrition::before{
+.application__item--nutrition::before {
   background-image: url(../img/application/eat.svg);
 }
 
-.application__item--time::before{
+.application__item--time::before {
   background-image: url(../img/application/time.svg);
 }
 
@@ -82,4 +142,10 @@
   line-height: 18px;
   color: #444444;
   text-align: left;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
