@@ -15,103 +15,10 @@
     grid-template-columns: 1fr;
     grid-template-rows: 120px minmax(50px, 251px);
     margin: 0;
+  }
 
-    &--chicken-500g::before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      background-image: url(../img/product/catalog-1.png);
-      width: 161px;
-      height: 172px;
-      top: -44px;
-      left: 84px;
-    }
-
-    &--chicken-1000g::before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      background-image: url(../img/product/catalog-2.png);
-      width: 168px;
-      height: 206px;
-      top: -73px;
-      left: 75px;
-    }
-
-    &--fish-500g::before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      background-image: url(../img/product/catalog-3.png);
-      width: 161px;
-      height: 172px;
-      top: -51px;
-      left: 84px;
-    }
-
-    &--fish-1000g::before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      background-image: url(../img/product/catalog-4.png);
-      width: 168px;
-      height: 200px;
-      top: -73px;
-      left: 75px;
-    }
-
-    &--buckwheat-500g::before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      background-image: url(../img/product/catalog-5.png);
-      width: 161px;
-      height: 172px;
-      top: -51px;
-      left: 84px;
-    }
-
-    &--buckwheat-1000g::before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      background-image: url(../img/product/catalog-6.png);
-      width: 168px;
-      height: 200px;
-      top: -73px;
-      left: 75px;
-    }
-
-    &--rice-500g::before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      background-image: url(../img/product/catalog-7.png);
-      width: 161px;
-      height: 172px;
-      top: -51px;
-      left: 84px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 245px;
-      grid-template-columns: 245px;
-
-      &--chicken-500g::before,
-      &--fish-500g::before,
-      &--buckwheat-500g::before,
-      &--rice-500g::before {
-        left: 47px;
-      }
-
-      &--chicken-1000g::before,
-      &--fish-1000g::before,
-      &--buckwheat-1000g::before,
-      &--buckwheat-1000g::before{
-        left:41px
-      }
-
-    }
+  @media (min-width: @desktop-width) {
+    width: 245px;
   }
 }
 
@@ -128,7 +35,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 42px 36px 33px 40px;
+    padding: 0;
+    padding-left: 46px;
   }
 
 }
@@ -155,6 +63,7 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 21px;
+    padding-right: 50px;
   }
 }
 
@@ -186,14 +95,25 @@
 }
 
 .product__image {
-  padding: 19px 36px 12px 36px;
   grid-column: 1/2;
   grid-row: 2/-2;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    display: block;
+    padding: 0 82px 390px;
+
   }
 
+  @media (min-width: @desktop-width) {
+    display: block;
+    padding: 0px 42px 390px;
+  }
+}
+
+.product__wrapper-img{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  text-align: center;
 }
 
 .product__wrapper-button {
