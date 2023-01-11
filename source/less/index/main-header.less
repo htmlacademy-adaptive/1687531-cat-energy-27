@@ -2,6 +2,11 @@
   flex-direction: column;
   background-color: #fff;
   color: @basic-color;
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+    padding-top: 53px;
+  }
 }
 
 .main-header__wrapper {
@@ -114,8 +119,14 @@
     padding-top: 18px;
   }
 
-}
+  @media (min-width: @desktop-width) {
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 30px;
+  }
 
+}
 .site-list__item:not(:last-child) {
 
   @media (min-width: @tablet-width) {
