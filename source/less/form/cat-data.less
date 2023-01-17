@@ -1,0 +1,63 @@
+.cat-data__item {
+  margin: 0;
+  margin-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-data__name {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @text-grey;
+  margin-right: 13px;
+  white-space: nowrap;
+}
+
+.cat-data__name-form {
+  box-sizing: border-box;
+  border: 1px solid @grey-border;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  padding-left: 15px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @text-grey;
+  width: 100%;
+
+  &:hover {
+    border: 1px solid @special-grey;
+  }
+
+  &:focus {
+    outline: 2px solid @text-grey;
+  }
+
+  &:invalid {
+    outline: 2px solid @error;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .cat-data__item {
+    margin-bottom: 16px;
+  }
+
+  .cat-data__name {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 17px;
+  }
+
+  .cat-data__name-form {
+    padding: 11px 18px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
