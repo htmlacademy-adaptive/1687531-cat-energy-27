@@ -121,18 +121,49 @@
 
   @media (min-width: @desktop-width) {
     background: transparent;
-    color: #FFFFFF;
+    color: #111111;
     font-size: 20px;
     line-height: 30px;
   }
 
 }
+
 .site-list__item:not(:last-child) {
 
   @media (min-width: @tablet-width) {
     margin-right: 33px;
   }
 
+}
+
+.site-list__item--current::before{
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 154px;
+    background-color: #68b738;
+    height: 2px;
+    bottom: 1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+  }
+}
+
+.site-list__item--below::before{
+  @media (min-width: @tablet-width) {
+  position: absolute;
+  content: "";
+  width: 65px;
+  background-color: #68b738;
+  height: 2px;
+  bottom: 1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 71px;
+  }
 }
 
 

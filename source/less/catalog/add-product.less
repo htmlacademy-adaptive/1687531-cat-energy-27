@@ -27,6 +27,49 @@
 
 }
 
+.add-product__wrapper--line::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 490%;
+    background-color: #68B738;
+    right: 89%;
+    margin-right: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 292%;
+    right: 93%;
+  }
+}
+
+.add-product__wrapper--line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 367%;
+  background-color: #68B738;
+  left: 66%;
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 490%;;
+    background-color: #68B738;
+    left: 57%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 292%;
+    left: 35%;
+  }
+}
+
 .add-product__list {
   margin: 0;
   padding: 0;
@@ -99,7 +142,7 @@
 .add-product__title {
   font-size: 24px;
   line-height: 24px;
-  text-align: center;
+  text-align: left;
   margin-top: 25px;
   margin-bottom: 36px;
   font-weight: 400;
@@ -220,6 +263,7 @@
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 35px;
+
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/phone/cat-catalog@2x.png");
     background-size: 279px 289px;
@@ -239,9 +283,9 @@
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/phone/cat-catalog-3.png);
     grid-column: 3/4;
     margin: 0;
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/phone/cat-catalog-3@2x.png");
-      background-size: 245px 289px;
-    }
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/phone/cat-catalog-3@2x.png");
+    background-size: 245px 289px;
+  }
 }
 
 .add-product__stock::before {
