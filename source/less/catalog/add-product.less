@@ -32,9 +32,8 @@
   position: absolute;
   width: 1000px;
   height: 2px;
-  top: 15px;
+  top: 40px;
   background-color: #68B738;
-  left: -300px;
   z-index: 1;
 
   @media (min-width: @tablet-width) {
@@ -131,6 +130,11 @@
   margin-bottom: 36px;
   font-weight: 400;
   z-index: 2;
+  display: inline-block;
+  position: relative;
+  justify-self: start;
+  background-color: @white;
+  padding-right: 21px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -139,8 +143,9 @@
     margin-bottom: 80px;
     margin-left: 37px;
     text-align: left;
-    background-color: @white;
-    justify-self: start;
+    margin: 0;
+    margin-bottom: 80px;
+    padding: 0 36px;
   }
 
   @media (min-width: @desktop-width) {

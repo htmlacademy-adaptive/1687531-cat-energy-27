@@ -64,9 +64,21 @@
 
 .contact__input--email {
   background-image: url("../img/phone/mail.svg");
+  background-size: 18px 13px;
   background-repeat: no-repeat;
   background-position: right 15px center;
+
+  &:focus {
+    background-image: url("../img/phone/mail-focus.svg");
+  }
+
+  &:invalid {
+    background-image: url("../img/phone/mail-error.svg")
+  }
+
 }
+
+
 
 .contact__input--phone {
   background-image: url("../img/phone/phone.svg");

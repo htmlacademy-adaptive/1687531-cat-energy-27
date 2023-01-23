@@ -1,13 +1,16 @@
 .promo {
   margin-bottom: 20px;
   position: relative;
+  min-height: 480px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    min-height: 870px;
   }
 
   @media (min-width: @desktop-width) {
     position:inherit ;
+    min-height: 669px;
   }
 }
 
@@ -32,9 +35,10 @@
     margin: 0;
     top:0;
     height: 696px;
-    width: 720px;
+    width: 50%;
     left: 50%;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/promo/gray-cat-desktop.png)
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/promo/gray-cat-desktop.png);
+    background-size:cover
   }
 }
 
@@ -60,15 +64,21 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 3px;
+  position: absolute;
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    width: 709px;
+    height: 609px;
+    bottom: 35px;
   }
 
   @media (min-width: @desktop-width) {
-   position: relative;
-   bottom: 270px;
-   left: 448px;
+    position: absolute;
+    top: 29%;
+    left: 39.7%;
+    width: 552px;
+    height: 499px;
   }
 }
 
@@ -114,7 +124,7 @@
     font-size: 20px;
     line-height: 20px;
     color: @basic-color;
-    margin-bottom: 20px;
+    margin-bottom: 49px;
     padding-left: 93px;
     text-align: left;
   }
@@ -137,11 +147,13 @@
   line-height: 18px;
   display: block;
   text-align: center;
+  top: 266px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     position: relative;
     display: inline-block;
-    top: -577px;
+    top: 0;
     left: 95px;
     padding: 14px 26px;
     font-size: 20px;
@@ -149,8 +161,7 @@
   }
 
   @media (min-width: @desktop-width) {
-  top: -449px;
-  left: 93px;
+    margin-top: 52px;
   }
 
   &:hover {
