@@ -1,0 +1,133 @@
+.module__number {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: @black;
+  text-transform: uppercase;
+}
+
+.module__text {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: @text-grey;
+  margin-top: 9px;
+  margin-bottom: -14px;
+  padding: 0 10px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: @grey-light;
+}
+
+.module__number--result {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.module__number--result:first-child {
+  margin-right: 2px;
+}
+
+.module__description {
+  display: flex;
+}
+
+.module__description--result {
+  margin-top: 34px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.module__description:not(:last-child) {
+  flex-direction: column;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+  padding-top: 10px;
+  border-radius: 3px;
+  min-width: 124px;
+}
+
+.module__description:first-child {
+  margin-right: 32px;
+}
+
+@media (min-width: @tablet-width) {
+  .module__number {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .module__number--result:first-child {
+    margin-bottom: 10px;
+  }
+
+  .module__description:not(:last-child) {
+    min-width: 162px;
+  }
+
+  .module__description {
+    display: flex;
+  }
+
+  .module__description--result {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    align-items: flex-end;
+    align-self: center;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  .module__number--result {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .module__description:first-child {
+    margin-right: 42px;
+  }
+
+  .module__text {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: -3px;
+    background-color: @white;
+  }
+
+  .module__text--br {
+    display: none;
+  }
+
+  .module__statistic {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .module__number--result:first-child {
+    margin-bottom: 0;
+    margin-right: 63px;
+  }
+
+  .module__description--result {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .module__statistic {
+    display: flex;
+  }
+
+  .module__text {
+    background-color: @basic-grey;
+  }
+}
