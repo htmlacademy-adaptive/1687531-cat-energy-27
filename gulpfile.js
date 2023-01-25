@@ -9,8 +9,9 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
-import del from 'del';
+import deleteAsync from 'del';
 import browser from 'browser-sync';
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 
@@ -27,28 +28,27 @@ export const styles = () => {
 
 //HTML
 
-const html = () => {
+ const html = () => {
   return gulp.src('source/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
 //Images
 
-const optimizeImages = () => {
+ const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   pipe(squoosh())
   pipe(gulp.dest('build/img'))
 }
-
-const copyImages = () => {
+ const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   pipe(gulp.dest('build/img'))
 }
 
 //WebP
 
-const createWebp = () => {
+ const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({
       webp: {}
@@ -58,13 +58,13 @@ const createWebp = () => {
 
 //SVG
 
-const svg = () => {
+ const svg = () => {
   return gulp.src('source/img/**/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
 
-const sprite = () => {
+ const sprite = () => {
   return gulp.src('source/img/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
@@ -76,7 +76,7 @@ const sprite = () => {
 
 //Copy
 
-const copy = (done) => {
+ const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
@@ -89,8 +89,8 @@ const copy = (done) => {
 
 //Clean
 
-const clean = () => {
-  return del('build');
+ const clean = () => {
+  return deleteAsync('build');
 };
 
 // Server
@@ -141,10 +141,10 @@ export const build = gulp.series(
 
 export default gulp.series(
   clean,
-  copy,
-  copyImages,
-  gulp.parallel(
-    styles,
+   copy,
+   copyImages,
+   gulp.parallel(
+     styles,
     html,
     svg,
     sprite,
