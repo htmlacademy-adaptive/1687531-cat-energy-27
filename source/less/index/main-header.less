@@ -136,7 +136,9 @@
 }
 
 .site-list--index a{
-  color: #fff;
+  @media (min-width: @desktop-width) {
+    color: #fff;
+  }
 }
 
 .site-list__item:not(:last-child) {
@@ -147,7 +149,7 @@
 
 }
 
-.site-list__item--current::before{
+.site-list__current::before{
   @media (min-width: @tablet-width) {
     position: absolute;
     content: "";
@@ -162,7 +164,7 @@
   }
 }
 
-.site-list__item--below::before{
+.site-list__below::before{
   @media (min-width: @tablet-width) {
   position: absolute;
   content: "";
