@@ -43,8 +43,14 @@
         </picture>
       </a><a class="main-header__logo"><img class="main-header__logo-image" src="img/header-phone/title-cat-energy.svg"
           width="101" height="18" alt="Онлайн магазин «Cat-Energy»"></a>
-      <nav class="main-nav main-nav--closed main-nav--nojs"><button class="main-nav__toggle" type="button"><span
-            class="visually-hidden">Открыть меню</span></button>
+
+          <!-- При отключенном JS добавить для nav классы main-nav--opened и  main-nav--nojs -->
+          <!-- При подключенном JS убрать для nav класс main-nav--nojs и заменить модификатор в main-nav--opened на main-nav--closed -->
+          <!-- По клику на .main-nav__toggle заменить для nav класс и заменить модификатор в main-nav--closed на main-nav--opened  -->
+          <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list site-list--index">
             <li class="site-list__item"><a class="site-list__link site-list__position site-list__below"
@@ -69,8 +75,8 @@
           <source media="(min-width: 1220px)"
             srcset="img/promo/index-cat-desktop.png, img/promo/index-cat-desktop@2x.png 2x">
           <source media="(min-width: 768px)"
-            srcset="img/promo/orange-product-index@1.png, img/promo/orange-product-index@2x.png 2x"><img
-            class="promo__product-image" src="img/promo/orange-product-index.png" width="280" height="270"
+            srcset="img/promo/orange-product-index@1.png, img/promo/orange-product-index@2x.png 2x">
+            <img class="promo__product-image" src="img/promo/orange-product-index.png" srcset="img/promo/orange-product-mobile@2x.png 2x" width="280" height="270"
             alt="Продукт компании Cat energy.">
         </picture><a class="promo__button button promo__button--acent" href="form.html">Подобрать программу</a>
       </div>
@@ -143,9 +149,8 @@
               <div class="slider__item slider__item--before" style="left: 50%; width: 50%;">
                 <div class="slider__box slider__box--before">
                   <picture>
-                    <source media="(min-width: 768px)" srcset="img/live-example/cat-fat-desktop.png"><img
-                      class="example__cat-img" width="311" height="232" src="img/live-example/cat-fat.png"
-                      alt="Толстый кот">
+                    <source media="(min-width: 768px)" srcset="img/live-example/cat-fat-desktop.png , img/live-example/cat-fat@2x-tablet.png 2x">
+                    <img class="example__cat-img" width="311" height="232" src="img/live-example/cat-fat.png" srcset="img/live-example/cat-fat@2x-mobile.png 2x" alt="Толстый кот">
                   </picture>
                 </div>
               </div>
@@ -153,8 +158,8 @@
                 style="left: 50%; width: 50%;">
                 <div class="slider__box slider__box--after">
                   <picture>
-                    <source media="(min-width: 768px)" srcset="img/live-example/cat-skinny-desktop.png"><img
-                      class="example__cat-img" height="232" src="img/live-example/cat-skinny.png" alt="Тощий кот">
+                    <source media="(min-width: 768px)" srcset="img/live-example/cat-skinny-desktop.png , img/live-example/cat-skinny@2x-tablet.png 2x">
+                    <img class="example__cat-img" width="280" height="232" src="img/live-example/cat-skinny.png" srcset="img/live-example/cat-skinny@2x-tablet.png 2x" alt="Тощий кот">
                   </picture>
                 </div>
               </div>
@@ -177,7 +182,7 @@
         <div class="collaboration__map">
           <h3 class="visually-hidden">Наше местоположение.</h3><iframe class="collaboration__google-map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
-            width="100%" height="362" allowfullscreen
+            width="320" height="362" allowfullscreen
             title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
         </div>
       </section>
