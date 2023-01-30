@@ -6,6 +6,10 @@
 
 .footer__collaboration {
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    background: #F2F2F2;
+  }
 }
 
 .footer__collaboration--catalog {
@@ -18,12 +22,13 @@
 
 .footer__logo {
   padding-top: 39px;
-  padding-bottom: 32px;
-  padding-left: 7px;
+  padding-bottom: 16px;
+  padding-left: 0px;
+  width: 266px;
   text-align: center;
-  border-bottom: 1px solid @color-border;
-  margin-right: 20px;
-  margin-left: 20px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-right: 0px;
+  margin-left: 8px;
 }
 
 .footer__copyright {
@@ -43,9 +48,10 @@
   .footer__contacts {
     display: flex;
     width: 708px;
-    padding: 65px 30px;
+    padding: 47px 0;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
   }
 
   .footer__logo {
@@ -53,11 +59,14 @@
     padding: 0;
     text-align: center;
     border-bottom: none;
+    padding-right: 76px;
+    width: 144px;
   }
 
   .footer__social {
     margin: 0;
     padding: 0;
+    padding-right: 52px;
   }
 
   .footer__social-list {
@@ -69,6 +78,11 @@
     margin: 0;
     padding: 0;
   }
+
+  .footer-logo__cat-energy{
+    width: 145px;
+    height: 27px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -78,6 +92,7 @@
     padding: 60px 110px;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
   }
 
   .footer__logo {

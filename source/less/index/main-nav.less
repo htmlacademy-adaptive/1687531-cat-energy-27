@@ -1,0 +1,135 @@
+.main-nav {
+  width: auto;
+  min-height: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav__toggle {
+    width: 24px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    top: 0;
+    right: auto;
+    left: 0;
+    position: absolute;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 18px;
+      width: 24px;
+      height: 2px;
+      background-color: #111111;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+      top: 25px;
+      left: 276px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 25px;
+      left: 276px;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: fade(#ffffff, 30%);
+    }
+  }
+
+  .main-nav--opened.main-nav--nojs .main-nav__toggle {
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 277px;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  opacity: 0.6;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  .main-nav--closed .user-list__item {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+@media (max-width: @mobile-width-only) {
+
+  .main-nav--opened .site-list {
+    position: absolute;
+    margin-top: 18px;
+  }
+
+
+.main-nav--opened.main-nav--nojs .site-list {
+  display: block;
+  position: static;
+}
+
+.main-nav--closed.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--closed.main-nav--nojs .main-nav {
+  height: 0;
+}
+
+.main-nav--opened .site-list {
+  z-index: 2;
+  width: 100%;
+  left: 0;
+}
+
+.main-nav--opened .main-nav {
+  position: none;
+}
+
+.main-nav--closed{
+  height: 0;
+}
+
+}
