@@ -8,56 +8,64 @@
 
 }
 
-
-.main-nav__toggle {
-  width: 24px;
-  background-color: transparent;
-  border: none;
-}
-
-.main-nav--opened .main-nav__toggle {
-  top: 0;
-  right: auto;
-  left: 0;
-
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 24px;
-    left: 18px;
+@media (max-width: @mobile-width-only) {
+  .main-nav__toggle {
     width: 24px;
-    height: 2px;
-    background-color: #111111;
+    background-color: transparent;
+    border: none;
   }
 
-  &::before {
-    transform: rotate(45deg);
-    box-shadow: none;
-    top: -13px;
-    left: 257px;
-    display: none;
+  .main-nav--opened .main-nav__toggle {
+    top: 0;
+    right: auto;
+    left: 0;
+    position: absolute;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 18px;
+      width: 24px;
+      height: 2px;
+      background-color: #111111;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+      top: 25px;
+      left: 276px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 25px;
+      left: 276px;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: fade(#ffffff, 30%);
+    }
   }
 
-  &::after {
-    transform: rotate(-45deg);
-    top: -13px;
-    left: 257px;
-    display: none;
+  .main-nav--opened.main-nav--nojs .main-nav__toggle {
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
-  &:active::before,
-  &:active::after {
-    background-color: fade(#ffffff, 30%);
-  }
 }
 
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 21px;
-  left: 248px;
+  top: 17px;
+  left: 277px;
   width: 24px;
   height: 2px;
   background-color: #000000;
@@ -90,25 +98,38 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .main-nav--opened.main-nav--nojs .site-list {
-    display: block;
+
+  .main-nav--opened .site-list {
+    position: absolute;
+    margin-top: 18px;
   }
 
-  .main-nav--closed.main-nav--nojs .main-nav__toggle {
-    display: none;
-  }
 
-  .main-nav--closed.main-nav--nojs .main-nav{
-    height: 0;
-  }
+.main-nav--opened.main-nav--nojs .site-list {
+  display: block;
+  position: static;
 }
 
-.main-nav--opened .site-list{
+.main-nav--closed.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--closed.main-nav--nojs .main-nav {
+  height: 0;
+}
+
+.main-nav--opened .site-list {
   z-index: 2;
   width: 100%;
   left: 0;
 }
 
-.main-nav--opened .main-nav{
+.main-nav--opened .main-nav {
   position: none;
+}
+
+.main-nav--closed{
+  height: 0;
+}
+
 }

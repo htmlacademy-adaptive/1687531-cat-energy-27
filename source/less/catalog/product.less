@@ -5,7 +5,7 @@
   grid-template-columns: repeat(2, 140px);
   grid-template-rows: repeat(3, auto);
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 25px;
   position: relative;
 
 
@@ -13,7 +13,6 @@
     background-color: #f2f2f2;
     width: 324px;
     grid-template-columns: 1fr;
-    grid-template-rows: 120px minmax(50px, 251px);
     margin: 0;
   }
 
@@ -31,7 +30,7 @@
     padding: 0;
     grid-column: 1/2;
     grid-row: 2/3;
-    padding: 34px 36px 33px 36px;
+    padding: 6px 33px 11px 35px;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,7 +41,7 @@
 }
 
 .product__heading {
-  font-family: Oswald , Arial;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -52,6 +51,7 @@
   margin: 0;
   margin-bottom: 14px;
   text-decoration: none;
+  padding-bottom: 8px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -59,6 +59,7 @@
     margin-bottom: 21px;
     margin-bottom: 21px;
     text-align: center;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -69,7 +70,7 @@
 }
 
 .product__descriptions {
-  font-family: Lato, Arial;
+  font-family: "Lato", "Arial", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -80,14 +81,14 @@
   grid-template-columns: repeat(2, 70px);
   grid-template-rows: repeat(3, auto);
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 11px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 16px;
     grid-template-columns: repeat(2, 125px);
     grid-template-rows: repeat(3, auto);
-    row-gap: 16px;
+    row-gap: 5px
   }
 
   @media (min-width: @desktop-width) {
@@ -101,22 +102,30 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    padding: 0 82px 30px;
 
-    &--big-pic{
+    &--big-pic {
       width: 168px;
       height: 206px;
+      padding: 0px 79px 21px;
+      margin-top: -24px;
     }
 
-    &--small-pic{
+    &--small-pic {
       width: 161px;
       height: 172px;
+      padding: 0 82px 30px;
     }
   }
 
   @media (min-width: @desktop-width) {
     display: block;
     padding: 0px 42px 34px;
+  }
+}
+
+.product__image {
+  @media (max-width: @mobile-width-only) {
+    padding-top: 6px;
   }
 }
 .product__wrapper-img {
@@ -128,6 +137,7 @@
     grid-column: 1/2;
     grid-row: 1/2;
     text-align: center;
+    margin-top: -44px;
   }
 }
 
@@ -138,7 +148,7 @@
   @media (min-width: @tablet-width) {
     grid-column: 1/2;
     grid-row: 3/4;
-    padding: 0 37px 39px 39px;
+    padding: 2px 38px 38px 40px;
   }
 
   @media (min-width: @desktop-width) {

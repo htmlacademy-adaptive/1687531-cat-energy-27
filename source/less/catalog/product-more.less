@@ -5,16 +5,16 @@
   justify-items: center;
   grid-template-columns: 280px;
   grid-template-rows: repeat(4, 40px);
-  padding-top: 33px;
+  padding-top: 16px;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 9px;
 
   @media (min-width: @tablet-width) {
     width: 324px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     margin: 0;
-    padding-top: 38px;
+    padding-top: 26px;
     border: 2px solid #F2F2F2;
 
     @media (min-width: @desktop-width) {
@@ -40,7 +40,7 @@
     background-image: url(../img/product/plus-2.png);
     width: 60px;
     height: 60px;
-    top: 52px;
+    top: 19px;
   }
 
   @media (min-width: @desktop-width) {
@@ -50,7 +50,7 @@
 }
 
 .product-more__heading {
-  font-family: Oswald, Arial;
+  font-family: "Oswald", "Arial" , sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -62,7 +62,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 22px;
-    padding: 100px 94px 0 96px;
+    padding: 67px 94px 0 96px;
     text-align: center;
     margin-bottom: 23px;
   }
@@ -73,7 +73,7 @@
 }
 
 .product-more__descriptions {
-  font-family: Lato, Arial;
+  font-family: "Lato", "Arial" , sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -98,7 +98,8 @@
 
   @media (min-width: @tablet-width) {
     grid-row: 4/5;
-    padding: 0 37px 49px 38px;
+    padding: 12px 37px 49px 38px;
+    margin-top: 7px;
   }
 
   @media (min-width: @desktop-width) {
@@ -127,4 +128,10 @@
   }
 
 
+}
+
+.product-more__wrapper-button {
+  @media (max-width: @mobile-width-only) {
+    margin-top: -4px;
+  }
 }
