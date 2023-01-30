@@ -34,7 +34,8 @@
     </symbol>
   </svg>
   <header class="main-header">
-    <div class="main-header__wrapper"><a class="main-header__logo" href="index.html">
+    <div class="main-header__wrapper">
+      <a class="main-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1220px)" width="70" height="59" srcset="img/header-phone/header-logo-desktop.svg">
           <source media="(min-width: 768px)" width="60" height="50" srcset="img/header-phone/header-logo-tablet.svg">
@@ -47,7 +48,7 @@
           <!-- При отключенном JS добавить для nav классы main-nav--opened и  main-nav--nojs -->
           <!-- При подключенном JS убрать для nav класс main-nav--nojs и заменить модификатор в main-nav--opened на main-nav--closed -->
           <!-- По клику на .main-nav__toggle заменить для nav класс и заменить модификатор в main-nav--closed на main-nav--opened  -->
-          <nav class="main-nav main-nav--closed main-nav--nojs">
+          <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -56,7 +57,7 @@
             <li class="site-list__item"><a class="site-list__link site-list__position site-list__below"
                 href="#">Главная</a></li>
             <li class="site-list__item"><a class="site-list__link site-list__place" href="catalog.html">Каталог
-                продукци</a></li>
+                продукции</a></li>
             <li class="site-list__item"><a class="site-list__link" href="form.html">Подбор программы</a></li>
           </ul>
         </div>
@@ -120,7 +121,7 @@
               питание.</p>
           </li>
           <li class="application__item application__item--time application__item--four">
-            <p class="application__description">Уже через месяц наслаждайтесь<br>изменениями к лучшему<br>вашего
+            <p class="application__description">Уже через месяц наслаждайтесь<br class="application__transfer">изменениями к лучшему<br class="application__transfer">вашего
               питомца!</p>
           </li>
         </ul>

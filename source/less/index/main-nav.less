@@ -2,15 +2,15 @@
   width: auto;
   min-height: 0;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     margin-left: auto;
   }
 
 }
 
+
 .main-nav__toggle {
   width: 24px;
-  height: 16px;
   background-color: transparent;
   border: none;
 }
@@ -94,14 +94,13 @@
     display: block;
   }
 
-  .main-nav--opened.main-nav--nojs .main-nav__toggle {
+  .main-nav--closed.main-nav--nojs .main-nav__toggle {
     display: none;
   }
 
-  .main-nav--opened.main-nav--nojs {
-    margin-top: 17px;
+  .main-nav--closed.main-nav--nojs .main-nav{
+    height: 0;
   }
-
 }
 
 .main-nav--opened .site-list{

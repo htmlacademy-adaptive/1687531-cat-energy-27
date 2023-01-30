@@ -16,14 +16,14 @@
 }
 
 .application__title {
-  font-family: 'Oswald', sans-serif;
+  font-family: Oswald, Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   color: @basic-color;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 43px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -104,7 +104,7 @@
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
-  margin-right: 20px;
+  margin-right: 24px;
 
 
     @media (min-width: @tablet-width) {
@@ -136,16 +136,24 @@
 
 
 .application__description {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, Arial;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
   text-align: left;
   margin: 0;
+  width: 199px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    width: 244px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .application__transfer {
+    display: none;
   }
 }

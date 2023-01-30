@@ -1,5 +1,5 @@
 .promo {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   position: relative;
   min-height: 480px;
 
@@ -20,7 +20,7 @@
   position: absolute;
   width: 100%;
   height: 302px;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../img/promo/gray-cat.png" 1x, "../img/promo/gray-cat@2x.png" 2x);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../img/promo/gray-cat.jpg" 1x, "../img/promo/gray-cat@2x.png" 2x);
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 20px;
@@ -48,10 +48,12 @@
 
   @media (min-width: @tablet-width) {
     width: 709px;
+    padding-right: 7px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1220px;
+    position: relative;
   }
 }
 
@@ -64,26 +66,27 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 3px;
-  position: absolute;
 
   @media (min-width: @tablet-width) {
     margin: 0;
     width: 709px;
     height: 609px;
     bottom: 35px;
+    position: absolute;
+    right: 29px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 29%;
-    left: 39.7%;
+    top: 15%;
+    left: 36.7%;
     width: 552px;
     height: 499px;
   }
 }
 
 .promo__title {
-  font-family: "Oswald", sans-serif;
+  font-family: Oswald, Arial;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
@@ -109,7 +112,7 @@
 }
 
 .promo__description {
-  font-family: 'Oswald', sans-serif;
+  font-family: Oswald, Arial;
   font-weight: 400;
   font-size: 14px;
   line-height: 1;
@@ -136,7 +139,7 @@
 }
 
 .promo__button {
-  font-family: 'Oswald', sans-serif;
+  font-family: Oswald, Arial;
   font-weight: 400;
   background-color: #68B738;
   padding: 11px 44px;
@@ -147,15 +150,13 @@
   line-height: 18px;
   display: block;
   text-align: center;
-  top: 266px;
-  position: relative;
 
   @media (min-width: @tablet-width) {
     position: relative;
     display: inline-block;
     top: 0;
     left: 95px;
-    padding: 14px 26px;
+    padding: 17px 28px;
     font-size: 20px;
     line-height: 20px;
   }
